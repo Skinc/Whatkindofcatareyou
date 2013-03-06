@@ -5,14 +5,13 @@
 exports.start = function(req, res){
     question = "What kind of cat hangs out in your house?"
     answer = "HOUSE CAT"
-    res.render('layout', { title: 'What kind of cat are you?', Question: question, Answer:answer, showindex: "a", showabout:"", showcontact:"", win:""  });    
+    res.render('layout', { title: 'What kind of cat are you?', Question: question, Answer:answer, showindex: "a", showabout:"", showcontact:""  });    
 }
 
 exports.index = function(req, res){
     var oldanswer;
     var answer; 
     var question;
-    var win = ""
     oldanswer = req.body.answer
     console.log(oldanswer)
     
@@ -76,8 +75,7 @@ exports.index = function(req, res){
     } else if (oldanswer == "CATTLE"){
             question = "What kind of cat throws stuff over the wall of a castle?"
             answer = "CATAPULT"    
-    } else if (oldanswer == "CATAPULT"){           
-            question = "What kind of cat is tunnels under the castle?"
+    } else if (oldanswer == "CATAPULT"){           question = "What kind of cat is tunnels under the castle?"
             answer = "CATACOMB"
     } else if (oldanswer == "CATACOMB"){
             question = "What kind of cat floats on two pontoons?"
@@ -93,25 +91,31 @@ exports.index = function(req, res){
             answer = "CAT STEVENS"
     } else if (oldanswer == "CAT STEVENS"){
             question = "What kind of cat is the capital of Nepal?"
-            answer = "KATHMANDU"
-    } else if (oldanswer == "KATHMANDU"){
+            answer = "KATMANDU"
+    } else if (oldanswer == "KATMANDU"){
             question = "What kind of cat carries your golf clubs?"
             answer = "CADDY"
     } else if (oldanswer == "CADDY"){
             question = "That's all the clues!"
-            answer = "The song is through"
-            win = "a"
+            answer = "WHAT KIND OF CAT ARE YOU?"
+    } else if (oldanswer = "WHAT KIND OF CAT ARE YOU?"){
+            question = "You win!"
+            answer = "I do?"
+    } else if (oldanswer = "I do?"){
+            question = "You win!"
+            answer = "I do?"
     } 
 
-    res.render('index', { title: 'What kind of cat are you?', Question: question, Answer:answer, showindex: "a", win: win });
+
+    res.render('index', { title: 'What kind of cat are you?', Question: question, Answer:answer, showindex: "a" });
 };
 
 exports.about = function(req, res){
     
-    res.render('layout', { title: 'What kind of cat are you?', showindex: "", showabout:"a", showcontact:"", win:""  });    
+    res.render('layout', { title: 'What kind of cat are you?', showindex: "", showabout:"a", showcontact:""  });    
 }
 
 
 exports.contact = function(req, res){
-   res.render('layout', { title: 'What kind of cat are you?', showindex: "", showabout:"", showcontact:"a", win:""  });    
+   res.render('layout', { title: 'What kind of cat are you?', showindex: "", showabout:"", showcontact:"a"  });    
 }

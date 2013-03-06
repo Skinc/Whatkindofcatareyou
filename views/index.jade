@@ -1,16 +1,21 @@
-script   
-    $("#answer").focus()
+
+if (win)
+  img(src="https://photos-6.dropbox.com/t/0/AAAp9uMsMDfE57lpOxiuENm7raVXvdZWXewvRiofugyzgg/12/42246856/jpeg/32x32/3/_/1/2/2013-03-05%2023.13.16.jpg/PRu1F_3TxY_y2ded7xx3a5EEe07Q1BB7ZAvRqNs2M_A?size=1024x768")
+else 
+  script   
+      $("#answer").focus()
 
 
-div.container-fluid(id="replace")
-  div.row-fluid
-    span.span12
-      div.row-fluid
-        span.span12
-      h1.heading.pull-center #{Question}
-  div.row-fluid
-    span.span6
-      div
-        input.textinput.pull-right.span7#answer(type='text',name='',placeholder='Answer')
-    span.span6
-      button.btn.btn-inverse.pull-left.submit(id=Answer) Enter
+  div.container-fluid(id="replace")
+    div.row-fluid
+      span.span12
+        div.row-fluid
+          span.span12
+        h1.heading.pull-center #{Question}
+    div.row-fluid
+      span.span6
+        div
+          input.textinput.pull-right.span7#answer(type='text',name='',placeholder='Answer')
+      span.span6
+        button.btn.btn-inverse.pull-left.submit(id=Answer) Enter
+

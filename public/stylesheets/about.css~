@@ -16,8 +16,3 @@
 .container-fluid .row-fluid .span12 .row-fluid .span12 .pull-center-1 span {
   font-size: 20px;
 }
-
-marquee {
-    color: #FFFFFF;
-    font-weight: bold;
-}
