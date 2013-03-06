@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.container-fluid .row-fluid .span12 .row-fluid .span12 {
+  height: 300px;
+  width: 940px;
+}
+.container-fluid .row-fluid .span12 .heading {
+  height: 80px;
+  text-align: center;
+}
+#answer {
+  font-size: 18px;
+/*}
+.container-fluid .row-fluid .span6 .btn-success {
+  border: 1px solid rgba(0, 0, 0, 0.0980392);
+  font-size: 18px;
+  background: #116da5;
+  background-image: -moz-linear-gradient(270deg, #116da5 0%, #51a351 100%);
+  background-image: -webkit-linear-gradient(270deg, #116da5 0%, #51a351 100%);
+  background-image: -o-linear-gradient(270deg, #116da5 0%, #51a351 100%);
+  background-image: linear-gradient(180deg, #116da5 0%, #51a351 100%);
+  width: 80px;
+  height: 30px;
+}*/

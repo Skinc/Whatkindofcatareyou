@@ -1,0 +1,51 @@
+doctype 5
+html
+  head
+    title= title
+
+    script(src='http://code.jquery.com/jquery.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/read.css')
+    script(src='/javascripts/client.js')
+  body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') What kind of Cat are you?
+          .nav-collapse.collapse
+            ul.nav
+              if (showindex)
+                li.active
+                  a(href='/') Home
+              else
+                li
+                  a(href='/') Home
+
+              if (showabout)
+                li.active
+                  a(href='/about') About us
+              else
+                li
+                  a(href='/about') About us
+
+              li
+                a(href='http://www.youtube.com/watch?v=2apMXm7NwX0') Inspiration 
+
+              if (showcontact)
+                li.active
+                  a(href='/contact') Contact
+              else  
+                li
+                  a(href='/contact') Contact
+              
+    .container(id='page')
+      if (showindex)
+        include index
+      if (showabout) 
+        include about
+      if (showcontact) 
+        include contact
